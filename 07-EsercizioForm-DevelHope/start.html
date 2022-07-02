@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Lezione HTML</title>
+	<style>
+		label {
+			display: block
+		}
+	</style>
+</head>
+<body>
+		<!--Inizio Esercizio-->
+<main>
+	<h1><strong>Form Molto Bello</strong></h1>
+		<!--Dati Personali-->
+	<form action="develHope.php" method="GET">
+		<fieldset>
+		<legend><strong><h2>Dati Personali</h2></strong></legend>
+		<label for="email-user">Email:</label>
+		<input type="email" id="email-user" name="email-user"/>
+		<label for="password-user">Password:</label>
+		<input type="password" name="password-user" id="password-user"/>
+		<label for="name-surname-user">Nome e Cognome:</label>
+		<input type="text" name="name-surname-user" id="name-surname-user"/>
+		<label for="date-of-birth-user">Seleziona la tua data di nascita:</label>
+		<input type="date" name="date-of-birth-user" id="date-of-birth-user"/>
+		<label for="telephone-number-user">Numero di telefono:</label>
+		<input type="number" name="telephone-number-user" id="telephone-number-user"/>
+	</fieldset>
+	<!--Piano d'abbonamento-->
+		<div>
+		<fieldset>
+		<legend><strong><h2>Piano d'abbonamento</h2></strong></legend>
+		<label for="plan-user"><strong>Scegli il tuo piano:</strong></label> <br> 
+		<select  required id="plan-user" name="plan-user">
+			<optgroup label="Free">
+			<option value="0">Piano Standard(Gratis)</option>
+			</optgroup>
+			<optgroup label="Opzioni a pagamento">
+				<option value="25">Mensile (25$)</option>
+				<option value="40">Semestrale (40$)</option>
+				<option value="70">Annuale (70$)</option>
+			</optgroup>
+		</select>
+		
+		<!--Vantaggi PRO-->
+		<div>
+			<label for="PRO-user"><i>Includi Vantaggi PRO</i><br> (+20$)</label>
+			<input type="checkbox" name="PRO-user" id="PRO-user"/>
+		</div>
+	</div>
+	</fieldset>
+	<!--Dati Carta di credito-->
+	<div>
+	<fieldset>
+		<legend><strong><h2>Inserisci dati carta di credito</h2></strong></legend>
+		<label for="cart-number-user">Numero carta:</label>
+		<input type="number" name="cart-number-user" id="cart-number-user"  min="13" />
+		<label for="password-user">CVC:</label>
+		<input type="password" name="password-user" id="password-user" maxlength="3" />
+		<label for="expiration-user">Scadenza:</label>
+		<input type="date" name="expiration-user" id="expiration-user"/>
+		<hr>
+		<p><strong>Indirizzo fatturazione:</strong></p> <br>
+		<label for="address-user">Indirizzo</label>
+		<input type="text" id="address-user" name="address-user"/>
+		<label for="cap-user">Cap</label>
+		<input type="number" name="cap-user" id="cap-user"/>
+
+		<label for="submit-user"></label>
+		<input type="submit" value="VAI" id="submit-user" name="submit-user"/>
+		</fieldset>
+		</div>
+		</form>
+</main>
+</body>
+
+</html>
