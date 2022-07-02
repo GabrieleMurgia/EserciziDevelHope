@@ -1,0 +1,28 @@
+.container{
+    display:flex ;
+    flex-direction: row;
+    color: black;
+    font-weight: 600;
+}
+
+#yellow{
+    order: 1;
+    width:40%;
+}
+#red{
+    order: 2;
+    width:40%;
+}
+#green{
+    order: 3;
+    width:40%;
+}
+#orange{
+    order:4;
+    width: 100%;
+}
+#blue{
+order: 5;
+width:40%;
+}
+

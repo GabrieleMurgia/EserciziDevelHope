@@ -1,0 +1,48 @@
+/*Regole generali*/
+.calcolatrice{
+    width: 400px;
+    overflow: hidden;
+    border: none;
+    margin-left: 100px;
+    border-radius: 5%;
+}
+/*Regole parte superiore*/
+.schermo input{
+    width: 100%;
+    text-align: end;
+    background-color: rgb(74, 92, 97);;
+    padding: 20px;
+    font-size: 30px;
+    border: none;
+}
+input,textarea{
+    color:white;
+}
+/*Regole parte inferiore*/
+.tasti{
+    display: grid;
+    grid-template-columns:repeat(4,1fr) ;
+    grid-template-rows:repeat(5,1fr) ;
+}
+.tasti :nth-child(1),.tasti :nth-child(2),.tasti :nth-child(3),.tasti :nth-child(4){
+    background-color: rgb(190, 232, 245);
+    border-right: none;
+}
+
+#bottone-uguale{
+    grid-column:4/4 ;
+    grid-row: 2/6;
+    background-color: rgb(230, 99, 99);
+    border: none;
+}
+button{
+    background-color: rgb(212, 237, 245);
+    padding: 30px;
+    font-size: 30px;
+    border-bottom: none;
+    border:0.5px solid gray;
+    cursor: pointer;
+}
+button:hover{
+    opacity: 50%;
+}

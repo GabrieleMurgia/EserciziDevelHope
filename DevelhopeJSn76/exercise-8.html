@@ -1,0 +1,36 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Hero's List</h2>
+      <ul class="hero-list">
+        <li class="hero-list-item">Batman</li>
+        <li class="hero-list-item">Superman</li>
+        <li class="hero-list-item">Spiderman</li>
+        <li class="hero-list-item">Hulk</li>
+        <li class="hero-list-item">Wolverine</li>
+      </ul>
+    </div>
+  </body>
+</html>
+
+<style>
+  #red{
+    color: red;
+  }
+</style>
+
+<script>
+  const heroListItemClass = document.querySelectorAll(".hero-list-item");
+  console.log(heroListItemClass)
+
+  for(i=0;i<heroListItemClass.length;i++){
+    const li = heroListItemClass[i];
+    console.log(li)
+    heroListItemClass[i].addEventListener("mouseover", () => {
+      li.setAttribute("id","red")
+    })
+    heroListItemClass[i].addEventListener("mouseout", () => {
+      li.removeAttribute("id")
+    })
+  }
+</script>

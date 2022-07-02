@@ -1,0 +1,42 @@
+/*Regole Generali*/
+.grid{
+    display: grid;
+    grid-template-columns:repeat(3,1fr) ;
+    grid-template-rows:0.5fr 1fr 0.5fr ;
+    color: black;
+    font-weight: 500;
+}
+/*Regole Blocchi singoli*/
+#green{
+grid-column:1/4 ;
+grid-row:1/1 ;
+}
+#yellow{
+    grid-column:1/1 ;
+    grid-row:2/2;
+    
+}
+#yellow ul{
+    display: grid;
+    grid-template-columns:repeat(2,1fr) ;
+    grid-template-rows:repeat(2,1fr);
+}
+#red{
+    grid-column:2/2 ;
+    grid-row:2/2;
+    
+}
+#red ul{
+   display: grid;
+   grid-template-columns:repeat(2,1fr) ;
+   grid-template-rows:repeat(2,1fr);
+}
+#blue{
+    grid-column:3/3 ;
+    grid-row:2/4 ;
+}
+#orange{
+    grid-column: 1 / 3 ;
+    grid-row:3/3 ;
+}
+

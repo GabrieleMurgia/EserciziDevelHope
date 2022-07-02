@@ -1,0 +1,92 @@
+/*Regole per generali*/
+body{
+    background-color: gray;
+}
+nav{
+    background-color: rgb(40, 45, 46);
+    color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+    width: 45rem;
+}
+nav > span:nth-child(1){
+   margin-left:10px ;
+}
+nav > span , nav > a, nav > select, nav > button, nav > input {
+    margin-right: 10px;
+    font-size: 15px;
+}
+/*Regole per link*/
+nav > a{
+    color: gray;
+    text-decoration: none;
+}
+nav > a:hover{
+    transition: 0.3s;
+    color:blue;
+}
+/*Regole per dropdown*/
+nav > select{
+    color:gray;
+    border:0;
+    background:none;
+}
+nav > select:hover{
+    cursor: pointer;
+}
+/*Regole per button*/
+nav > button{
+    color: gray;
+    background: none;
+    border: 0;
+}
+  nav button[type=submit] {
+    padding:5px 15px; 
+    color: green;
+    background: none;
+    border:1px solid green;
+}
+nav button[type=submit]:hover {
+   cursor: pointer;
+
+   transition: 0.4s;
+   background-color: green;
+   color: white;
+}
+/*Regole per search*/
+nav input[type=text]{
+    padding:5px 15px; 
+    border-radius: 5px;
+}
+/*Regole per Hamburger menu*/
+.hamburger-menu > div{
+
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin: 6px 0;
+        border:1px solid green;
+        border-radius: 5px;
+        display: none;
+}
+
+
+@media screen and (max-width:768px){
+    nav > span:nth-child(2) , nav > a , nav > select , nav > button , nav > input{
+        display: none;
+    }
+    nav{
+        max-width:45rem;;
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .hamburger-menu > div{
+        display: block;
+    }
+    .hamburger-menu{
+        margin-right: 20px;
+    }
+}

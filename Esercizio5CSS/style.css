@@ -1,0 +1,18 @@
+.card{
+    border:1px solid gray;
+    width: 340px;
+    font-size: 15px;
+}
+p,a{
+    border-bottom: 1px solid gray;
+    padding-left: 10px;
+}
+h2{
+    padding-left: 10px;
+    color: black;
+    font-size: 2rem;
+}
+.responsive {
+    width: 100%;
+    height: auto;
+  }

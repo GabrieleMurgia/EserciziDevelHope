@@ -1,0 +1,57 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's Form</h2>
+      <form id="person-form">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+   const form = document.body.querySelector("form");
+ function initForm(){
+   const firstName = document.createElement("label");
+   firstName.textContent=" First Name: "
+   firstName.setAttribute("id","First-Name")
+   const inputFirstName = document.createElement("input");
+   inputFirstName.setAttribute("id","input-first-name")
+
+   const lastName = document.createElement("label");
+   lastName.textContent=" Last Name: "
+   lastName.setAttribute("id","Last-Name")
+   const inputLastName = document.createElement("input");
+   inputLastName.setAttribute("id","input-last-name")
+
+   const age = document.createElement("label");
+   age.textContent=" Age: "
+   age.setAttribute("id","Age")
+   const inputAge = document.createElement("input");
+   inputAge.setAttribute("id","input-age")
+   inputAge.setAttribute("type","number")
+
+
+   form.append(firstName,inputFirstName,lastName,inputLastName,age,inputAge)
+ }
+
+
+ function submitPersonForm(event){
+  event.preventDefault();
+  let person ={};
+  let agePerson = document.body.querySelector("#input-age").value
+  let firstNamePerson = document.body.querySelector("#input-first-name").value
+  let lastNamePerson = document.body.querySelector("#input-last-name").value
+  
+  person[document.body.querySelector("#First-Name").id] = firstNamePerson;
+  person[document.body.querySelector("#Last-Name").id] = lastNamePerson;
+  person[document.body.querySelector("#Age").id] = agePerson;
+  console.log(person)
+ }
+
+
+ const submitButton = document.body.querySelector("button");
+ submitButton.onclick = submitPersonForm;
+
+ window.addEventListener("DOMContentLoaded", initForm);
+</script>

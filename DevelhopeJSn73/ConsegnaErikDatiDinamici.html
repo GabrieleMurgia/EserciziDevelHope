@@ -1,0 +1,58 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's List</h2>
+      <table id="person-table">
+        <tbody></tbody>
+      </table>
+      <button id="add-row">Add row</button>
+    </div>
+  </body>
+</html>
+
+<style>
+  #flex-body{
+    display: flex;
+    flex-direction: column;
+  }
+  tr{
+    display: flex;
+    justify-content: space-around;
+  }
+</style>
+
+<script>
+  const submitButton = document.querySelector("#add-row");
+
+  let input1 = document.createElement("input");
+  input1.setAttribute("placeholder","First Name")
+  let input2 = document.createElement("input");
+  input2.setAttribute("placeholder","Last Name")
+  let input3 = document.createElement("input");
+  input3.setAttribute("placeholder","Age")
+  const tbody = document.querySelector("tbody");
+
+  submitButton.addEventListener("click",addRow)
+  const personTable = document.querySelector("#person-table");
+
+  personTable.append(input1,input2,input3)
+
+  function addRow(){
+    const tr = document.createElement("tr");
+    const th1 = document.createElement("th");
+    
+    const th2 = document.createElement("th");
+  
+    const th3 = document.createElement("th");
+    th1.innerHTML = input1.value;
+    th2.innerHTML = input2.value;
+    th3.innerHTML = input3.value;
+    
+   
+    tr.append(th1,th2,th3);
+    tbody.setAttribute("id","flex-body")
+    tbody.append(tr)
+  }
+
+
+</script>
