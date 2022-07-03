@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Gestione Todo Con tabella</title>
+</head>
+  <body>
+    <span id="istruzioni-sorting">Premi sul nome della colonna per ordinare in base al parametro.</span>
+ 
+    <div id="container">
+      <label for="search-title">Cerca per titolo</label>
+     <div class="search-bar">
+      <input type="text" id="search-title" placeholder="inserisci il titolo">
+      <div class="buttons-dx"><button id="cerca">Impagina</button> <button id="filtra-vere">Filtra Vere</button> <button id="filtra-false">Filtra False</button> <button id="remove-pagination" style="width: 200px">Rimuovi impaginazione</button></div>
+     </div>
+        <table id="tabella-todo" class="table-sortable">
+          <thead>
+            <tr>
+              <th data-sort="id">ID</th>
+              <th data-sort="title">TITOLO</th>
+              <th data-sort="status">STATO</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+          </table>
+          <div class="buttons">
+            <button id="previous-page">Pagina Precedente</button>
+            <button id="next-page">Pagina Successiva</button>
+            <span id="counter-pagina-label"> Pagina N.<span id="counter-pagina"></span></span>
+        </div>
+     <!--  <button type="button" id="fetch-post">Fetch Post</button> -->
+    </div>
+    <button class="carica-tabella" id="nascosto" onClick="document.location.reload(true)" >Carica La Tabella</button>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="pager.js"></script>
+  </body>
+</html>
+
+
